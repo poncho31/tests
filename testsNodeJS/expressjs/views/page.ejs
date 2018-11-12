@@ -1,0 +1,13 @@
+<h1>Competeur max  <%= compteur %> </h1>
+<p>Numéro : 
+<%
+	for (var i = 1; i <= compteur; i++) {
+		%>
+			<%= i %>
+		<%
+	}
+%>
+</p>
+<p>
+	Nom au hasard : <%= noms[Math.round(Math.random() * (noms.length - 1))]%>
+</p>

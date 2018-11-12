@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{font-family: 'time new roman';}
+            .title{
+                text-align: center;
+                background: rgba(55, 123, 185, 0.8);
+                margin: 5px;
+                text-shadow: 2px 2px 2px #395977;
+            }
+            .form{
+                position: fixed;
+                bottom: 5px;
+                right: 10px;
+                background: rgba(55, 123, 185, 0.8);
+                padding: 1%;
+                border-radius: 4px;
+            }
+            .form input{
+                height: 4vh;
+                width: 15vw;
+                border-radius: 4px;
+            }
+            .other{
+                float: right;
+            }
+            .other span{
+                background: rgba(185, 123, 185, 0.8);
+            }
+            .me{
+                float: left;
+            }
+            .me span{
+                background: rgba(55, 123, 185, 0.8);
+            }
+            .me span, .other span, .newUser, .title{
+                border-radius: 4px;
+                padding: 2px;
+                color: white;
+                font-weight: bold;
+            }
+            .newUser{
+                float: right;
+                background: rgba(100, 123, 185, 0.8);
+            }
+            table.info{
+                overflow-y: scroll;
+                position:relative;
+                width: 70%;
+                margin: 0 auto;
+                top: 0;
+            }
+            tr, td{
+                position:relative;
+                margin: 1vh 0;
+                word-wrap: break-word;
+            }
+            tr:nth-child(even){background: rgba(50, 155, 178, 0.2);}
+            tr:hover{
+                background: rgba(50, 155, 178, 0.5);
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+            }
+        </style>
+        <meta charset="utf-8" />
+        <title>Socket.io</title>
+    </head>
+    <body>
+    <h1 class="title">Express chat</h1>
+    <table class="info">
+    </table>
+    <p class="form">
+        <input type="text" id="poke">
+        <input type="button" value='Envoyer message' id="submit">
+    </p>
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="http://192.168.0.10:8082/socket.io/socket.io.js"></script>
+        <script>
+            var socket = io.connect('http://192.168.0.10:8082', {transports: ['websocket', 'polling', 'flashsocket']});
+            var pseudo = prompt('Quel est votre pseudo ?');
+            if (pseudo != null && pseudo != '') {
+                socket.emit('newUser', pseudo);
+                socket.on('newUser', 
+                           function(newUser)
+                           {
+                                if (newUser['pseudo'] != undefined) {
+                                    $("<tr ><td class='newUser'><small>("+newUser['date']+")</small> "+newUser['pseudo']+"</td></tr>").hide().prependTo('.info').fadeIn();
+                                }
+                           })
+
+                $('#submit').click(function(){
+                    let date = new Date();
+                    let curdate = date.getHours() + ":" + date.getMinutes();
+                    let val = $('#poke').val();
+                    socket.emit('message', val);
+                    $(lineChat(curdate, val, ['me', pseudo], 0)).hide().prependTo(".info").fadeIn();
+                });
+
+                // Message envoyé aux autres utilisateur
+                socket.on('message', function(message){
+                    if(message['other'] != undefined) {
+                        $(lineChat(message['date'], message['message'], ['other', message['other']], message['color'])).hide().prependTo(".info").fadeIn();
+                        var sound = new Audio();
+                        sound.play('');
+                    }
+                });
+            }
+            else{
+                window.location.replace('http://192.168.0.10:8082');
+            }
+            
+            function lineChat(date, message, person = array(), color){
+                const colorOther = ['transparent','blue', 'red', 'violet'];
+                var echo = "<tr><td class='"+person[0]+"'>" + color +"<span style='border:solid 1px "+colorOther[color]+"'>"+person[1]+ "</span> "+message + " <small> ("+date+")</small></td></tr>";
+                return echo;
+            }
+
+        </script>
+    </body>
+</html>

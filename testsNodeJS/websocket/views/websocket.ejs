@@ -1,0 +1,31 @@
+    <p>
+        <input type="text" id="poke">
+        <input type="button" value='Embeter serveur' id="submit">
+    </p>
+    <div class="info"></div>
+    <body>
+        <h1>Communication avec socket.io !</h1>
+
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+        <script>
+            var socket = io.connect('http://localhost:8083');
+            socket.on('connect', function(){
+                socket.emit('join', 'Hello World from client');
+            })
+
+
+            // socket.on('message', function(message){
+            //     $('.info').html(message['content'] + message['importance'])
+            // });
+            // $('#submit').click(function(){
+            //     let val = $('#poke').val();
+            //     socket.emit('message', val);
+            // });
+            // socket.on('info', function(message){
+            //     $('.info').html(message);
+            // });
+            
+            // var pseudo = prompt('Quel est votre pseudo ?');
+            // socket.emit('petit_nouveau', pseudo);
+        </script>

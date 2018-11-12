@@ -1,0 +1,55 @@
+{% extends "../base.html" %}
+
+{% block titleContent %}
+    <h1>Liste des articles</h1>
+    <hr>
+{% endblock %}
+{% block content %}
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>Year</td>
+        </tr>
+        <tr>
+            <td>
+                {% if id_article > 10 %}
+                    {{id_article}}
+                {% else %}
+                    Trop petit {{ id_article }}
+                {% endif %}
+            </td>
+            <td>{{ year }} /{{ month }}</td>
+        </tr>
+    </table>
+    <p>Request {{ request }}</p>
+<hr>
+    <ul>
+        {% for couleur in couleurs %}
+            <li>{{ couleur }}</li>
+        {% endfor %}
+    </ul>
+
+<hr>
+
+    <ul>
+        {% for code, nom in dicoCouleurs.items %}
+            <li style="color:#{{ code }}">{{ code }} => {{ nom }}</li>
+        {% endfor %}
+    </ul>
+<div>
+        <table>
+            <tr>
+                <td>Titre</td>
+                <td>Contenu</td>
+            </tr>
+        {% for article in articles %}
+            <tr>
+                <td>{{ article.titre }}</td>
+                <td>{{ article.contenu|truncatewords_html:80 }}</td>
+            </tr>
+        {% empty %}
+                <p>Aucun article.</p>
+        {% endfor %}
+        </table>
+</div>
+{% endblock %}
