@@ -1,0 +1,148 @@
+/*---------------------------------------------------- SECTION / CARTE, LISTE --------------------------------------*/
+#svg-bw{
+    display: block;
+    width: 150%;
+    height:  100%;
+   margin: -3% -25%
+}
+.map__bw path{
+    fill: rgba(0,0,30,0.9);
+    stroke: #f6cc77;
+    stroke-width: 0.5px;
+    transition: fill 0.5s;
+    
+}
+.map__bw path:hover{
+    fill: rgba(255,189, 111, .5);
+    stroke: rgba(15,15,40,0.75);
+    transition: fill 0.5s;
+}
+.B-W{
+    transition: 1s ease-in-out;
+    
+}
+.B-W:hover{
+    transition: 0.6s ease-in-out;
+    transform: scale(1.009) translate(-1px, -1px);
+}
+
+/* MOBILE et TABLETTE ORIENTATION PORTRAIT*/
+
+@media screen and (orientation: portrait){ /*tablette*/
+    section .map__bw{
+       position: relative;
+       top: 125px;
+       left: 3em;
+       width: 80%;
+       transform: rotate(48deg)
+    }
+}
+@media screen and (orientation: portrait) and (max-device-width:500px) { /*mobile*/
+    section .map__bw{
+       position: relative;
+       top: 75px;
+       left: 0.2em;
+       width: 88%;
+       transform: rotate(48deg)
+    }
+}
+
+
+/* MOBILE et TABLETTE ORIENTATION PAYSAGE*/
+
+@media screen and (orientation: landscape) and (max-device-height: 800px){ 
+    section .map__bw{
+        display: relative;
+        width: 47%;
+        top: 5%;
+        margin: auto auto;  
+    }   
+}
+
+
+/* PC petit ECRAN rectangle RESOLUTION 1024/600*/
+
+@media screen  and (min-device-width: 1024px) and (min-device-height: 600px){ 
+    section .map__bw{
+        display: block;
+        width: 44%;
+        margin: auto auto;  
+    }
+}
+
+
+/* PC ECRAN carré RESOLUTION 1200/1024*/
+
+@media screen and (min-device-width: 1200px) and (min-device-height: 1024px) { 
+    section .map__bw{
+        display: block;
+        width: 70%;
+        margin: auto auto;
+        position: relative;
+        right: 31px;  
+    }
+   
+}
+
+
+ /* PC paysage RESOLUTION 1600/900*/
+
+@media screen and (min-device-width: 1600px) and (min-device-height: 900px) {
+    section .map__bw{
+        display: block;
+        width: 44%;
+        margin: auto auto;  
+        position: relative;
+        top: 1em
+    } 
+    
+}
+
+
+/* PC paysage RESOLUTION 1920/1080*/
+
+@media screen and (min-device-width: 1600px) and (min-device-height: 1000px) { 
+    section .map__bw{
+        display: block;
+        width: 45%;
+        margin: auto auto;  
+    } 
+}
+/*................RETOUR EN ARRIERE  */
+
+#page-bw section  a.back, #page-lln .back{
+    position: absolute;
+    top: 1em; right: 1.3em; color: wheat;
+    text-decoration: none;
+    z-index: 3;
+    font-size: 1.1em;
+    transition: 0.5s ease-in-out;
+}
+#page-bw section a.back:hover, #page-lln .back:hover{
+    color: orange;
+    transition: 0.5s ease-in-out;
+    
+}
+/*.................nom province  */
+.nom-province{
+    position: absolute;
+    right: 1%;
+    font-size: 4vh
+}
+
+
+/*..............liste deroulante BW - les communes */
+
+#liste-deroulante-bw{
+    position: absolute;
+    top: 0; left: 1em;
+    cursor: pointer;
+    
+}
+#liste-deroulante-bw option{
+    color: wheat;
+    font-size: 1.5em;
+    cursor: pointer;
+    background-color: rgba(0,0,30,0.9);
+
+}

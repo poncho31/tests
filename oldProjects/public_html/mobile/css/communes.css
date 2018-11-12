@@ -1,0 +1,60 @@
+#page-lln {
+    width: 100%;
+    height: 100%;
+    
+    text-align: center;
+    background: url("../img/background-couche2.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+#page-lln #gmap{
+    width: 88%;
+    height: 86%;
+    position: absolute;
+    top: 9%;
+    left: 5%;
+    border: solid #e78200 2px;
+    border-radius: 3%;
+    box-shadow: 0px 0px 70px 15px black
+}
+
+
+
+#infowindow p {
+        position: relative;
+        height: 100%;
+        margin: 0px;
+        color: #083b66;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 15px;
+        font-size: 1em;
+        text-shadow: rgba(0,0,5px,0.9) 0px 1px;
+        box-shadow: 0px 0px 20px 15px black
+      }
+#infowindow p img{
+            box-shadow: 0px 0px 20px 10px black;
+        
+
+}
+.gm-style-iw {
+      max-width: 200% !important;
+     
+      border: solid rgba(0,0,10,0.3);
+      border-radius:10px;
+      box-shadow: 0px 0px 100px 50px black;
+      
+    }
+        
+.gm-style-iw *{
+    position: relative;
+        top:0 !important;
+        left:0 !important;
+        border-radius:10px;
+        border: solid #e78200 1px !important;
+        background-color: rgba(0,0,10,0.5);
+        background: url("../img/background-couche1.jpg");
+        background-size: cover;
+       
+}
+
+

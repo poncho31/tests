@@ -1,0 +1,459 @@
+
+@font-face {
+    font-family: 'kaushan_scriptregular';
+    src: url('../font/kaushanscript-regular-webfont.woff') format('woff'),
+         url('../font/kaushanscript-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+*{margin:0; padding: 0; font-family: kaushan_scriptregular; text-shadow: 3px 3px 6px black; color: wheat; border: none;}
+
+
+body{
+      overflow: hidden
+}
+    /*ENLEVE BACKGROUND BLEU ET COULEUR BLANCHE LORS SELECTION ELEMENT  */
+::selection { 
+    background : none;
+    color : none
+}
+::-moz-selection{ 
+    background : none;
+    color : none
+}
+
+
+.page-img{
+    background: url("../img/background.jpg") no-repeat ; 
+      background-size: 100% 100%;
+}
+
+
+
+
+
+/*------------------------------------------------------HAUT DE PAGE------------------------------------------------------*/
+header{
+    
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+    background-color:  rgba(0,0,30, 0.6);
+    font-size: 3vh;
+    color: wheat;
+    border-bottom: solid 1px orange;
+    border-radius: 15%
+}
+
+/*TITRE APP*/
+/*TITRE APP*/
+header #titre em{
+    position: relative;
+    font: bold normal 300% kaushan_scriptregular;
+    
+
+    
+}
+
+
+
+
+/*----------------------------------------------------CURSEUR / NAVIGATION / BARRE LATERALE / SWIPE----------------------------------------------*/
+
+/*CURSEUR BARRE LATERALE*/
+/*CURSEUR BARRE LATERALE*/
+
+.curseur-b-lat {
+    position: absolute;
+    top: 2vh; left: 2vh;
+    line-height: 0.25em;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 5vh;
+    color: wheat;
+    z-index: 2;
+    border-radius: 15%;
+    border-right: solid 1px orange;
+    padding-bottom: 0.25em
+    
+}
+.curseur-b-lat:hover{
+    color: orange;
+}
+
+
+#nav-page1 {
+    
+    position: absolute;
+    top: 0;
+    display: block;  /* AFFICHER EN "flex" LA BARRE LATERALE GAUCHE dans JS*/
+    background: url("../img/background.jpg") no-repeat;
+    background-size: 250% 200%;
+    height: 160%;
+    width: 25%;
+    transform: translateX(-100%);
+    
+    transition: 1s ease-in-out;
+    box-shadow: -10px -10px 70px black inset
+
+}
+
+
+#nav-page1 a{
+   
+    color: wheat;
+    text-decoration: none;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 30%;
+    padding: 2%;
+    display: flex;
+    flex: 1;
+    font-size: 2vw;
+    
+    border-bottom: solid 1px orange;
+    border-radius: 15%
+}
+
+#nav-page1 a:hover, #nav-page2-bw a:hover{
+    color: orange;
+}
+
+#body{
+    transition: 0.5s ease-in-out
+}
+
+.translation-page{
+    transform: translateX(25%);
+    transition: 0.5s ease-in-out;
+
+}
+#opacité{
+   
+    position: absolute;
+    height: 150%;
+    width: 100%;
+    z-index: 2;
+    background-color: black;
+    opacity: 0.6;
+    display: none;
+    transition: 0.5s ease-in-out;
+}
+
+/*.......SWIPE MOBILE et PC......  */
+#swipe-right{
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 5%;
+    z-index: 1;
+    cursor: pointer
+}
+
+
+/*---------------------------------------------------- SECTION / CARTE, LISTE et LOGO --------------------------------------*/
+
+section{
+    
+    height: 76vh;
+    background-color: rgba(0,0,40,0.3);
+    position: relative;
+    overflow: hidden;
+   
+}
+
+/*--------------------------IMAGE RESOLUTION / ECRAN */
+/*--------------------------IMAGE RESOLUTION / ECRAN */
+
+section .map__image{
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+}
+
+/* MOBILE et TABLETTE ORIENTATION PORTRAIT*/
+
+@media screen and (orientation: portrait){section .map__image{
+       position: relative;
+       top: 55px;
+       left: -22px;
+       width: 110%;
+       transform: rotate(14deg)
+
+    }
+    section .map__list, .map__list2{
+       display: none;
+    }
+}
+@media screen and (orientation: portrait) and (min-device-width:500px) {#page1 section .map__image{
+       position: relative;
+       top: 55px;
+       left: -52px;
+       width: 109%;
+       transform: rotate(14deg)
+
+    }
+    section .map__list, .map__list2{
+       display: none;
+    }
+}
+
+/* MOBILE  ORIENTATION PAYSAGE*/
+
+@media screen and (orientation: landscape) and (max-device-height: 800px){ 
+    section .map__image{
+        display: relative;
+        width: 47%;
+
+        margin: auto auto;  
+    } 
+}
+
+/* PC petit ECRAN rectangle RESOLUTION 1024/600*/
+
+@media screen  and (min-device-width: 1024px) and (min-device-height: 600px){ 
+    section .map__image{
+        display: block;
+        width: 44%;
+        margin: auto auto;  
+    }
+}
+
+/* PC ECRAN carré RESOLUTION 1200/1024*/
+
+@media screen and (max-device-width: 1280px) and (min-device-height: 1024px) { 
+    section .map__image{
+        display: block;
+        width: 65%;
+        margin: auto auto;
+        position: relative;
+        right: 65px;  
+    }
+   
+}
+
+ /* PC paysage RESOLUTION 1600/900*/
+
+@media screen and (min-device-width: 1600px) and (min-device-height: 900px) {
+    section .map__image{
+        display: block;
+        width: 47%;
+        margin: auto auto;  
+        position: relative;
+        top: 1em;
+        overflow: visible
+    } 
+    
+}
+
+/* PC paysage RESOLUTION 1920/1080*/
+
+@media screen and (min-device-width: 1600px) and (min-device-height: 1000px) { 
+    section .map__image{
+        display: block;
+        width: 45%;
+        margin: auto auto;  
+    } 
+}
+
+
+
+/*-------------------------------IMAGE SVG*/
+/*-------------------------------IMAGE SVG*/
+
+section .map__image path {
+    fill: rgba(0,0,30,0.9);
+    stroke: #f6cc77;
+    stroke-width: 2px;
+    transition: fill 0.5s;
+    
+}
+
+.map__image .is-active path{
+    fill: rgba(	255,165,0, 0.3);
+    stroke: rgba(15,15,40,0.75);
+   
+}
+
+.area{
+    transition: 1s ease-in-out;
+    
+}
+.area:hover{
+    transition: 1s ease-in-out;
+    transform: scale(1.019) translate(-5px, -5px);
+    
+}
+.area:active{
+    transition: 0.1s ease-in-out;
+    transform: scale(1.019) translate(-5px, -5px);
+    
+    
+}
+
+svg{  /*POUR TOUS LES SVG*/
+    overflow: visible;
+    transition: 1s ease-in-out;
+    
+}
+svg:hover{
+    transform: scale(1.015);
+    
+}
+
+/*-------------------------------LISTES :  provinces - PAGE 1 */
+/*-------------------------------LISTES :  provinces - PAGE 1 */
+
+#page1 section .map__list{
+    position: absolute;
+    top: 25%;
+    left: 1%;
+    font-size: 2.1vw;;
+    text-align: left;
+    z-index: 1;
+    
+}
+#page1 .map__list a.is-active{
+    color: orange;
+}
+#page1 section .map__list2{
+    position: absolute;
+    top: 20%;
+    right: 1%;
+    font-size: 2.1vw;;
+    text-align: left;
+    z-index: 2;
+}
+#page1 .map__list2 a.is-active{
+    color: orange;
+}
+#page1 section .map__list a, .map__list2 a {
+    transition: 0.5s ease-in-out
+    }
+#page1 section .map__list a:hover, .map__list2 a:hover{
+    color: orange;
+    transition: 0.5s ease-in-out;
+}
+@media screen and (max-device-width: 1280px) and (min-device-height: 1024px) { 
+    #page1 section .map__list {
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    font-size: 2.1vw;;
+    text-align: left;
+    }  
+}
+@media screen and (orientation: landscape) and (max-device-width: 800px){
+    #page1 section .map__list, #page1 section .map__list2{
+    display: none
+    }
+}
+   
+#page1 section a:link {
+    text-decoration: none;
+    color: wheat;
+}
+
+#page1 section a:visited{
+    color: rgba(0, 0, 50, 0.1);
+    
+}
+/*.............................LISTE DEROULANTE*/
+/*.............................LISTE DEROULANTE*/
+
+.liste-deroulante-belgique{display: none}
+
+@media screen and (orientation: landscape) and (max-device-width:800px){
+    .liste-deroulante-belgique{
+    display: flex;
+    position: absolute;
+    top: 0;right: 5%;
+    list-style-type: none;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+    font-size: 0.8em;
+    }
+    .liste-deroulante-belgique div{
+    display: none;
+}
+.liste-deroulante-belgique li{
+    color: orange;
+    border: solid 1px orange;
+    border-radius: 15%;
+    border-top: none
+}
+.liste-deroulante-belgique a {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    transition: 1s ease-in-out;
+    line-height: 1.5em;
+    color: orange
+}
+}
+
+/*---------------------------------TEXTE - LOGO*/
+/*---------------------------------TEXTE - LOGO*/
+
+section #text{
+    position: absolute;
+    bottom: 10%;
+    left: 20vh;
+    color: wheat;
+    float: left;
+    transition: 0.7s ease-in-out;
+    cursor: pointer;
+    text-shadow: 5px 5px 20px black
+}
+@media screen and (orientation: portrait), (orientation: landscape) and (max-device-width: 800px) { section #text{
+    position: absolute;
+    bottom: 3%;
+    left: 1vh;
+    color: wheat;
+    float: left;
+    transition: 0.7s ease-in-out;
+    font-size: 0.8em
+    
+    }
+    
+}
+
+section #text:hover{
+    transition: 0.7s ease-in-out;
+    transform: translate(50px);
+    color: orange;
+    text-shadow: 5px 5px 20px black
+}
+
+
+                   
+/*-----------------------------------------------------------PIED DE PAGE--------------------------------------------------*/
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 12vh;
+    background-color:  rgba(0,0,30, 0.6);
+    font-size: 15pt;
+    color: wheat;
+    border-top: solid 1px orange;
+    border-radius: 15%
+}
+footer div{
+    transition: 0.7s ease-in-out ;
+}
+footer div:hover {
+    cursor: pointer;
+    transform: scale(1.3);
+    transition: 0.7s ease-in-out;
+    color: orange;
+    text-shadow: 5px 5px 20px black
+    
+}

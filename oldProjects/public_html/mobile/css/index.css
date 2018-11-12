@@ -1,0 +1,466 @@
+@font-face {
+    font-family: 'cinzel';
+    src: url('../font/CinzelDecorative-Regular.otf') format('otf'),
+         url('../font/CinzelDecorative-Regular.otf') format('otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+::selection { 
+    background : none;
+    outline: none;
+    text-decoration: none
+
+}
+::-moz-selection{ 
+    background : none;
+    outline: none;
+    text-decoration: none
+}
+a{
+    text-decoration: none
+}
+*{margin:0; padding: 0; font-size: 100% }
+
+html{
+  
+    height: 100%;
+    width: 100%;
+    
+    
+    
+}
+body{
+    color: wheat;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3em;
+    background-color: whitesmoke;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+}
+                         /*<!--        --><!--        --><!--        --><!--        --><!--        -->
+                           <!--        --><!--        --><!--        --><!--        --><!--        -->
+                           <!--00000000--><!--00000000--><!--00000000--><!--00000000--><!--00000000-->
+                           <!--00000000--><!--00000000--><!--00000000--><!--00000000--><!--00000000-->
+                           <!--        --><!--        --><!--        --><!--        --><!--        -->
+                           <!--        --><!--        --><!--        --><!--        --><!--        -->  */
+
+
+/*.........................................................TOUTES PAGES......................................................  */
+
+/*..............................BACK  */
+header .back{
+    position: absolute;
+    top: 5px;
+    right: 1%;
+    color: #e78200;
+    transition: 0.5s ease-in-out;
+    font-size: 0.5em;
+    z-index: 5
+}
+@media screen and (min-device-width: 800px) {
+    header .back{
+    position: absolute;
+    top: 5px;
+    right: 1%;
+    color: #e78200;
+    transition: 0.5s ease-in-out;
+    font-size: 1em
+}
+}
+.back:hover{
+    color: orange;
+    transition: 0.5s ease-in-out;
+    cursor: pointer
+}
+/*..............................LOGO  */
+.logo{
+    position: absolute;
+    top: 74vh;
+    left: 1%;
+    z-index: 5
+}
+@media screen and (min-device-width: 800px) and (orientation:landscape) {
+    .logo{
+        position: absolute;
+        top: 90vh;
+        left: 1%;
+        
+        
+    }
+}
+
+                    /*<!-- 0 0 0 0 --><!-- 0 0 0 0 --><!-- 0 0 0 0 --><!-- 0 0 0 0 --><!-- 0 0 0 0 -->
+                      <!--0       0--><!--0       0--><!--0       0--><!--0       0--><!--0       0-->
+                      <!--0       0--><!--0       0--><!--0       0--><!--0       0--><!--0       0-->
+                      <!--0       0--><!--0       0--><!--0       0--><!--0       0--><!--0       0-->
+                      <!--0       0--><!--0       0--><!--0       0--><!--0       0--><!--0       0-->
+                      <!-- 0 0 0 0 --><!-- 0 0 0 0 --><!-- 0 0 0 0 --><!-- 0 0 0 0 --><!-- 0 0 0 0 -->  */
+
+/*..........................................................INTRO .........................................................  */
+#intro{
+    background: url("../img/background-couche1.jpg");
+    background-size: 100% 100%;
+    
+}
+#intro p, #intro a{
+    font-size: 0.5em
+}
+@media screen and (min-device-width: 800px){
+    #intro p{
+    font-size: 2em
+}
+}
+
+
+
+#intro button{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    background-image: url("../img/background-couche1.jpg");
+    background-size: 100% 100%;
+     box-shadow: 0 0 20px 5px;
+    transition: 0.5s ease-in-out
+}
+#intro button:hover{
+    box-shadow: 0 0 20px 10px;
+    transform: scale(0.95);
+    transition: 0.5s ease-in-out
+}
+                     /*<!--    1    --><!--    1    --><!--    1    --><!--    1    --><!--    1    -->
+                       <!--  1 1    --><!--  1 1    --><!--  1 1    --><!--  1 1    --><!--  1 1    -->
+                       <!--1   1    --><!--1   1    --><!--1   1    --><!--1   1    --><!--1   1    -->
+                       <!--    1    --><!--    1    --><!--    1    --><!--    1    --><!--    1    -->
+                       <!--    1    --><!--    1    --><!--    1    --><!--    1    --><!--    1    -->
+                       <!-- 1 1 1 1 --><!-- 1 1 1 1 --><!-- 1 1 1 1 --><!-- 1 1 1 1 --><!-- 1 1 1 1 -->  */
+
+
+/*.........................................................HAUT DE PAGE ......................................................  */
+header p img{
+    position: absolute;
+    top: 43vh;
+    left: 36vw;
+    font-size: 0.5em;
+    background-size: 100% 100%;
+    z-index: 2;
+    overflow: visible
+    
+    
+    
+}
+
+@media screen and (min-device-width: 800px) and (orientation: landscape){
+    header p img{
+    position: absolute;
+    top: 46vh;
+    left: 46vw;
+    
+}
+}
+
+/*.........................................................SECTION............................................................  */
+
+#page1{
+    background:  url("../img/background-couche1.jpg") no-repeat;
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+}
+
+
+.box-haut{
+    display: flex;
+    flex-direction: column;
+    height: 48%;
+    text-align: center;
+   
+}
+
+.box-bas{
+    display:flex;
+    flex-direction: column;
+    margin-top: 1%;
+    height: 48%;
+    text-align: center;
+    
+}
+
+#page1 a button{
+    position: relative;
+    top: -2%;
+    left: 15%;
+    border-radius: 10%; 
+    background: url("../img/background-couche1.jpg") no-repeat;
+    background-size: 100% 100%;
+    width: 70%;
+    height: 70%;
+    box-shadow: 0 0 20px 5px;
+    transition: 0.1s ease-in-out
+}
+#page1 a button:hover{
+    box-shadow: 0 0 20px 10px;
+    transform: scale(0.85);
+    transition: 0s ease-in-out
+
+}
+   #page1 a button:active{
+    box-shadow: 0 0 20px 10px;
+    transform: scale(0.85);
+    transition: 0s ease-in-out
+} 
+
+@media screen and (min-device-width: 800px) and (orientation: landscape){
+    #page1 a button{
+    position: relative;
+    top: 2em;
+    left: 33%;
+    border-radius: 25%;
+    width: 40%;
+    height: 40%;
+    transition: 0.5s ease-in-out
+}
+#page1 a button:hover{
+    box-shadow: 0 0 20px 10px;
+    transform: scale(0.95);
+    transition: 0.5s ease-in-out
+}
+
+
+}
+#page1 a img{
+   
+        border-radius: 25%;
+        position: relative;
+        padding: 5%;
+}
+
+
+
+
+
+.box1, .box2{
+    border: solid rgba(0, 0, 30, 1);
+    border-radius: 50%;
+    height: 49%;
+    width: 49.4%;
+    margin: 0.1%;
+    justify-content: center;
+    transition: 1s ease-in-out
+
+    
+   
+}
+.box3, .box4{
+
+    border: solid rgba(0, 0, 30, 1);
+    border-radius: 50%;
+    width: 49.4%;
+    margin: 0.1%;
+    height: 49%;
+    justify-content: center;
+    vertical-align: middle
+
+}
+
+.box1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.box2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top: none;
+    border-right: none;
+    border-bottom: none
+
+
+}
+.box3{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: none;
+    border-left: none;
+    border-top: none;
+}
+.box4{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+
+}
+
+
+
+              /*<!--  2 2 2   --><!--  2 2 2   --><!--  2 2 2   --><!--  2 2 2   --><!--  2 2 2   -->
+                <!-- 2    2   --><!-- 2    2   --><!-- 2    2   --><!-- 2    2   --><!-- 2    2   -->
+                <!--     2    --><!--     2    --><!--     2    --><!--     2    --><!--     2    -->
+                <!--    2     --><!--    2     --><!--    2     --><!--    2     --><!--    2     -->
+                <!--  2       --><!--  2       --><!--  2       --><!--  2       --><!--  2       -->
+                <!-- 2  2  2  --><!-- 2  2  2  --><!-- 2  2  2  --><!-- 2  2  2  --><!-- 2  2  2  -->  */
+
+/*...................................................PAGE LOUER...........................................................  */
+
+#page-louer{
+    background: url("../img/background-couche2.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+
+#page-louer button{
+    
+    border-radius: 10%;
+    padding: 2%;
+    box-shadow: 0px 0px 50px 22px black;
+    transition: 0.5s ease-in-out;
+    text-decoration: none;
+    font-size: 0.5em;
+    background: url("../img/background-couche1.jpg") no-repeat;
+    background-size: 100% 100%;
+    
+}
+#page-louer button:hover{
+    box-shadow: 0 0 20px 10px;
+    transform: scale(0.95);
+    transition: 0.5s ease-in-out
+}
+@media screen and (max-device-width: 800px) and (orientation:landscape){
+    #page-louer button:hover{
+    transition: 0s ease-in-out
+}
+}
+
+.box-region{
+    position: absolute;
+    top: 25%;
+    left: 15%;
+}
+.box-recherche{
+     position: absolute;
+     top: 25%;
+     left: 55%
+}
+
+
+
+@media screen and (min-device-width: 800px){
+    #page-louer button{
+        padding: 30%;
+    }
+    .box-region{
+        position: absolute;
+        top: 35%;
+        left: 25%;
+}
+    .box-recherche{
+        position: absolute;
+        top: 35%;
+        left: 60%
+}
+}
+
+
+
+
+/* couleur bleue utilisée " #083b66 " 
+   ouleur orange utilisée " #e78200 "
+*/
+                          /*<!--  3 3 3   --><!--  3 3 3   --><!--  3 3 3   --><!--  3 3 3   --><!--  3 3 3   -->
+                            <!--      3   --><!--      3   --><!--      3   --><!--      3   --><!--      3   -->
+                            <!--    3 3   --><!--    3 3   --><!--    3 3   --><!--    3 3   --><!--    3 3   -->
+                            <!--      3   --><!--      3   --><!--      3   --><!--      3   --><!--      3   -->
+                            <!--  3 3 3   --><!--  3 3 3   --><!--  3 3 3   --><!--  3 3 3   --><!--  3 3 3   -->  */
+
+/*......................................................Page provinces - 3ème couche .......................... ................  */
+#page-provinces{
+    background: url("../img/background-couche3.jpg") no-repeat;
+    background-size: 100% 100%
+}
+#page-provinces #provinces{
+    position: absolute;
+    top: 5%;
+    left: 28%;
+    padding: 8%;
+    background: url("../img/background-couche1.jpg");
+    background-size: 100% 100%;
+    color: #083b66;
+    font-family: cinzel;
+    text-shadow:  2px 10px 10px black ;
+    border-radius: 10%;
+    box-shadow: 0px 0px 50px 22px black;
+    transition: 0.5s ease-in-out;
+    text-decoration: none;
+    font-size: 0.5em;
+}
+
+#page-provinces button:hover{
+    box-shadow: 0 0 20px 10px;
+    transform: scale(0.95);
+    transition: 0.5s ease-in-out
+}
+@media screen and (min-device-width: 800px) and (orientation:landscape){
+    #page-provinces button:hover{
+    box-shadow: 0 0 20px 10px;
+    transform: scale(0.95);
+    transition: 0s ease-in-out
+    }
+    #page-provinces #provinces{
+            font-size: 0.5em;
+            top: 18%;
+            left: 30%;
+            padding: 10%;
+    }
+}
+
+
+#provinces{
+    z-index: 0;
+}
+
+.select{
+    z-index: 10;
+    -moz-appearance: button
+}
+#select-3-button{
+    z-index: 100
+}
+
+                      /*<!--  4       --><!--  4       --><!--  4       --><!--  4       --><!--  4       -->
+                        <!--  4   4   --><!--  4   4   --><!--  4   4   --><!--  4   4   --><!--  4   4   -->
+                        <!--  4 4 4   --><!--  4 4 4   --><!--  4 4 4   --><!--  4 4 4   --><!--  4 4 4   -->
+                        <!--      4   --><!--      4   --><!--      4   --><!--      4   --><!--      4   -->
+                        <!--      4   --><!--      4   --><!--      4   --><!--      4   --><!--      4   -->  */
+
+#page-brabantwallon{
+    background: url("../img/background-couche4.jpg") no-repeat;
+    background-size: 100% 100%
+}
+#page-brabantwallon #communes{
+    position: absolute;
+    top: 5%;
+    left: 28%;
+    padding: 8%;
+    background: url("../img/background-couche1.jpg");
+    background-size: 100% 100%;
+    color: #083b66;
+    font-family: cinzel;
+    text-shadow:  2px 10px 10px black ;
+    border-radius: 10%;
+    box-shadow: 0px 0px 50px 22px black;
+    transition: 0.5s ease-in-out;
+    text-decoration: none;
+    font-size: 0.5em;
+}
+

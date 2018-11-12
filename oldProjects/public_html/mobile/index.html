@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/index.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/jquery1.3 beta (noprob).css"> 
+    </head>
+    <body>
+                        <!--        --><!--        --><!--        --><!--        --><!--        -->
+                        <!--        --><!--        --><!--        --><!--        --><!--        -->
+                        <!--00000000--><!--00000000--><!--00000000--><!--00000000--><!--00000000-->
+                        <!--00000000--><!--00000000--><!--00000000--><!--00000000--><!--00000000-->
+                        <!--        --><!--        --><!--        --><!--        --><!--        -->
+                        <!--        --><!--        --><!--        --><!--        --><!--        -->
+
+        <!-- ....................................................NAVIGATION (toutes pages)..................................................... -->
+
+
+<div data-role="nav">
+        <nav id="nav-page1">
+           
+        </nav>  
+</div>
+
+
+
+
+
+                        <!-- 0 0 0 0 --><!-- 0 0 0 0 --><!-- 0 0 0 0 --><!-- 0 0 0 0 --><!-- 0 0 0 0 -->
+                        <!--0       0--><!--0       0--><!--0       0--><!--0       0--><!--0       0-->
+                        <!--0       0--><!--0       0--><!--0       0--><!--0       0--><!--0       0-->
+                        <!--0       0--><!--0       0--><!--0       0--><!--0       0--><!--0       0-->
+                        <!--0       0--><!--0       0--><!--0       0--><!--0       0--><!--0       0-->
+                        <!-- 0 0 0 0 --><!-- 0 0 0 0 --><!-- 0 0 0 0 --><!-- 0 0 0 0 --><!-- 0 0 0 0 -->
+
+<!-- .............................................................INTRO ....................................................... -->
+
+
+<div data-role="page" id="intro">
+        <a href="#page1" data-transition="fade" ><button type=""> <img src="img/logo/logo1.png"  onclick="sonIntro()" alt=""></button></a>
+        <p>Cette application a pour but de vous trouver un appartement, une maison, un doux foyer, une cabane, une chambre d'hôte, un kot, une hûte, un tipi ou quoi que vous vouliez !  </p>
+        
+
+        <audio  id="beep" src="sound/sonIntro.mp3"></audio>
+        <audio  id="bep" src="sound/sound.mp3"></audio>
+
+<script>
+     function sonIntro() {
+
+        var sound = document.getElementById("beep");
+        sound.play();
+     
+     }
+     function sonPage(){
+        var sound = document.getElementById("bep");
+        sound.play();
+     }
+      var audio = document.getElementById("bep");
+      var audio2 = document.getElementById("beep");
+       audio.volume = 0.03;
+       audio2.volume = 0.03;
+</script>
+
+
+        
+</audio>
+</div>
+                        <!--    1    --><!--    1    --><!--    1    --><!--    1    --><!--    1    -->
+                        <!--  1 1    --><!--  1 1    --><!--  1 1    --><!--  1 1    --><!--  1 1    -->
+                        <!--1   1    --><!--1   1    --><!--1   1    --><!--1   1    --><!--1   1    -->
+                        <!--    1    --><!--    1    --><!--    1    --><!--    1    --><!--    1    -->
+                        <!--    1    --><!--    1    --><!--    1    --><!--    1    --><!--    1    -->
+                        <!-- 1 1 1 1 --><!-- 1 1 1 1 --><!-- 1 1 1 1 --><!-- 1 1 1 1 --><!-- 1 1 1 1 -->
+
+<!--.......................................................PAGE 1 - première couche...........................................................................-->
+
+<!-- .................................................. HAUT DE PAGE................................................... -->
+
+
+<div data-role="page" id="page1" >
+
+ 
+
+<div data-role="header">
+        <header>
+            <p><img src="img/logo/logo2.png" alt=""></p>
+            
+        </header>
+</div>
+    
+
+
+<!-- ......................................................SECTION....................................................... -->
+<div data-role="section">
+        <section>
+             <div class="box-haut">
+
+                    <div class="box1">
+                        <a href="#page-louer" data-transition="slide" data-direction="reverse" ><button type="button" onclick="sonPage()">  <img src="img/logo/louer2.png" alt="logo louer"> </button></a>
+                    </div>
+
+                    <div class="box2">
+                        <a href="#page-acheter" data-transition="slide" ><button type="button" onclick="sonPage()"><img src="img/logo/acheter2.png"  alt="logo acheter"></button></a>
+                    </div>
+    
+            </div>
+
+            <div class="box-bas">
+            
+                    <div class="box3">
+                        <a href="#page-proprietaires" data-transition="slide" data-direction="reverse" onclick="sonPage()"><button type="button"><img src="img/logo/proprietaires1.png"   alt="logo proprios"></button> </a>
+                    </div>
+                
+                    <div class="box4">
+                        <a href="#page-contact" data-transition="slide" ><button type="button" onclick="sonPage()"><img src="img/logo/contact2.png"   alt="logo contact"></button></a>
+                    </div>
+            </div>
+              
+            
+
+
+        </section>
+       </div> 
+
+
+<!-- .........................................................PIED DE PAGE................................................ -->
+<div data-role="footer">
+        <footer>
+          
+        </footer>
+</div>
+
+
+</div>
+
+
+
+
+
+                        <!--  2 2 2   --><!--  2 2 2   --><!--  2 2 2   --><!--  2 2 2   --><!--  2 2 2   -->
+                        <!-- 2    2   --><!-- 2    2   --><!-- 2    2   --><!-- 2    2   --><!-- 2    2   -->
+                        <!--     2    --><!--     2    --><!--     2    --><!--     2    --><!--     2    -->
+                        <!--    2     --><!--    2     --><!--    2     --><!--    2     --><!--    2     -->
+                        <!--  2       --><!--  2       --><!--  2       --><!--  2       --><!--  2       -->
+                        <!-- 2  2  2  --><!-- 2  2  2  --><!-- 2  2  2  --><!-- 2  2  2  --><!-- 2  2  2  -->
+                                                           
+
+
+
+<!--..............................................................PAGE louer - 2ème couche.........................................................-->
+
+<div data-role="page" id="page-louer"  >
+ 
+
+
+      <!-- HAUT DE PAGE-->
+<div data-role="header">
+        <header>
+            <img src="img/logo/logo2.png" alt="" class="logo">
+            <a class="back" data-transition="slide" href="#page1">Back</a>
+        </header>
+</div>
+    
+
+
+        <!-- SECTION -->
+
+<div data-role="section">
+
+        <section>
+                <div class="box-region">
+                        <a href="#page-provinces" data-transition="slide" data-direction="reverse" ><button data-transition="slide" type="button" id="region"  onclick="sonPage()"> <img src="img/logo/region2.png" alt="logo région" ></button></a>
+                        
+                </div>
+
+                <div class="box-recherche">
+                        <a href="#" data-transition="slide" data-direction="reverse" ><button type="button" id="recherche" onclick="sonPage()"> <img src="img/logo/recherche.png" alt="logo recherche"></button></a>
+                </div>
+      
+        
+        </section>
+</div>
+ <!-- PIED DE PAGE -->
+<div data-role="footer">
+        <footer>
+           
+        </footer>
+</div>
+
+</div>
+
+                        <!--  2 2 2   --><!--  2 2 2   --><!--  2 2 2   --><!--  2 2 2   --><!--  2 2 2   -->
+                        <!-- 2    2   --><!-- 2    2   --><!-- 2    2   --><!-- 2    2   --><!-- 2    2   -->
+                        <!--     2    --><!--     2    --><!--     2    --><!--     2    --><!--     2    -->
+                        <!--    2     --><!--    2     --><!--    2     --><!--    2     --><!--    2     -->
+                        <!--  2       --><!--  2       --><!--  2       --><!--  2       --><!--  2       -->
+                        <!-- 2  2  2  --><!-- 2  2  2  --><!-- 2  2  2  --><!-- 2  2  2  --><!-- 2  2  2  -->
+
+<!--.........................................................PAGE ACHETER - 2ème couche.........................................-->
+
+<div data-role="page" id="page-acheter">
+ 
+
+
+      <!-- HAUT DE PAGE-->
+<div data-role="header">
+        <header>
+            acheter
+            <img src="img/logo/logo2.png" alt="" class="logo">
+            <a class="back" data-transition="slide" data-direction="reverse" href="#page1">Back</a>
+
+        </header>
+</div>
+    
+
+
+        <!-- SECTION -->
+
+<div data-role="section">
+
+        <section>
+           
+            
+                
+              
+            
+        </section>
+</div>
+
+
+        <!-- PIED DE PAGE -->
+<div data-role="footer">
+        <footer>
+           
+        </footer>
+</div>
+
+
+</div>
+                        <!--  2 2 2   --><!--  2 2 2   --><!--  2 2 2   --><!--  2 2 2   --><!--  2 2 2   -->
+                        <!-- 2    2   --><!-- 2    2   --><!-- 2    2   --><!-- 2    2   --><!-- 2    2   -->
+                        <!--     2    --><!--     2    --><!--     2    --><!--     2    --><!--     2    -->
+                        <!--    2     --><!--    2     --><!--    2     --><!--    2     --><!--    2     -->
+                        <!--  2       --><!--  2       --><!--  2       --><!--  2       --><!--  2       -->
+                        <!-- 2  2  2  --><!-- 2  2  2  --><!-- 2  2  2  --><!-- 2  2  2  --><!-- 2  2  2  -->
+
+<!--..............................................................PAGE Propriétaires - 2ème couche.........................................................-->
+
+<div data-role="page" id="page-proprietaires">
+ 
+
+
+      <!-- HAUT DE PAGE-->
+<div data-role="header">
+        <header>
+            Propriétaires
+            <img src="img/logo/logo2.png" alt="" class="logo">
+            <a class="back" data-transition="slide" href="#page1">Back</a>
+
+        </header>
+</div>
+    
+
+
+        <!-- SECTION -->
+
+<div data-role="section">
+
+        <section>
+           
+            
+                
+              
+            
+        </section>
+</div>
+
+
+        <!-- PIED DE PAGE -->
+<div data-role="footer">
+        <footer>
+           
+        </footer>
+</div>
+
+</div>
+                        <!--  2 2 2   --><!--  2 2 2   --><!--  2 2 2   --><!--  2 2 2   --><!--  2 2 2   -->
+                        <!-- 2    2   --><!-- 2    2   --><!-- 2    2   --><!-- 2    2   --><!-- 2    2   -->
+                        <!--     2    --><!--     2    --><!--     2    --><!--     2    --><!--     2    -->
+                        <!--    2     --><!--    2     --><!--    2     --><!--    2     --><!--    2     -->
+                        <!--  2       --><!--  2       --><!--  2       --><!--  2       --><!--  2       -->
+                        <!-- 2  2  2  --><!-- 2  2  2  --><!--2  2  2   --><!--2  2  2  --><!-- 2  2  2  -->
+
+<!--..............................................................PAGE contact - 2ème couche.........................................................-->
+
+<div data-role="page" id="page-contact"  >
+ 
+
+
+      <!-- HAUT DE PAGE-->
+<div data-role="header">
+        <header>
+            Contact
+            
+            <a class="back" data-transition="slide" data-direction="reverse" href="#page1">Back</a>
+            
+
+        </header>
+</div>
+    
+
+
+        <!-- SECTION -->
+
+<div data-role="section">
+
+        <section>
+           
+            
+                
+              
+            
+        </section>
+</div>
+
+
+        <!-- PIED DE PAGE -->
+<div data-role="footer">
+        <footer>
+           
+        </footer>
+</div>
+
+
+</div>
+
+
+
+                        <!--  3 3 3   --><!--  3 3 3   --><!--  3 3 3   --><!--  3 3 3   --><!--  3 3 3   -->
+                        <!--      3   --><!--      3   --><!--      3   --><!--      3   --><!--      3   -->
+                        <!--    3 3   --><!--    3 3   --><!--    3 3   --><!--    3 3   --><!--    3 3   -->
+                        <!--      3   --><!--      3   --><!--      3   --><!--      3   --><!--      3   -->
+                        <!--  3 3 3   --><!--  3 3 3   --><!--  3 3 3   --><!--  3 3 3   --><!--  3 3 3   -->
+
+<!--..............................................................PAGE Provinces [page louer] - 3ème couche .........................................................-->
+
+<div data-role="page" id="page-provinces"  >
+ 
+
+
+      <!-- HAUT DE PAGE-->
+<div data-role="header">
+        <header>
+            
+            <a class="back" data-transition="slide" href="#page-louer">Back</a>
+            <img src="img/logo/logo2.png" alt="" class="logo">
+        </header>
+</div>
+    
+
+        <!-- SECTION -->
+
+<div data-role="section">
+
+        <section>
+               
+                <button id="provinces">
+                        <label ><img src="img/logo/provinces.png" alt="logo région">CCC </label>
+                         <select name="select" class="select" data-native-menu="true" data-theme="b" onclick="sonPage()" >
+                                <option value="" selected>vvv</option>
+                                <option value="#page-anvers" >Anvers</option>
+                                <option value="#page-brabantflamand" >Brabant Flamand</option>
+                                <option value="#page-brabantwallon"  >Brabant Wallon</option>
+                                <option value="#page-bruxelles" >Bruxelles</option>
+                                <option value="#page-flandresoccidentale" >Flandres Occidentale</option>
+                                <option value="#page-flandreorientale" >Flandres Orientale</option> 
+                                <option value="#page-hainaut" >Hainaut</option> 
+                                <option value="#page-liège" >Liège</option> 
+                                <option value="#page-limbourg" >Limbourg</option> 
+                                <option value="#page-luxembourg" >Luxembourg</option> 
+                                <option value="#page-namur" >Namur</option>                                 
+                       </select>
+                      
+                </button>
+        </section>
+        
+</div>
+ <!-- PIED DE PAGE -->
+<div data-role="footer">
+        <footer>
+           
+        </footer>
+</div>
+
+
+</div>
+
+ 
+
+
+
+
+                        <!--  4       --><!--  4       --><!--  4       --><!--  4       --><!--  4       -->
+                        <!--  4   4   --><!--  4   4   --><!--  4   4   --><!--  4   4   --><!--  4   4   -->
+                        <!--  4 4 4   --><!--  4 4 4   --><!--  4 4 4   --><!--  4 4 4   --><!--  4 4 4   -->
+                        <!--      4   --><!--      4   --><!--      4   --><!--      4   --><!--      4   -->
+                        <!--      4   --><!--      4   --><!--      4   --><!--      4   --><!--      4   -->
+
+
+
+<!--.................................................PAGE COMMUNES -BRABANT WALLON [page provinces]-  4ème COUCHE............................  -->
+
+<div data-role="page" id="page-brabantwallon"  >
+ 
+
+
+      <!-- HAUT DE PAGE-->
+<div data-role="header">
+        <header>
+            
+            <a class="back" data-transition="slide" href="#page-provinces">Back</a>
+            <img src="img/logo/logo2.png" alt="" class="logo">
+        </header>
+</div>
+    
+
+        <!-- SECTION -->
+
+<div data-role="section">
+
+        <section>
+                <button id="communes">
+                        <label for="select"><img src="img/logo/communes.png" alt="logo communes"> </label>
+                         <select name="select" class="select" data-native-menu="true" data-theme="b" onclick="sonPage()" >
+                                <option value="" selected></option>
+                                <option value="#page1">Beauvechain</option>
+                                <option value="">Braine-L'Alleud</option>
+                                <option value="">Braine-le-Chateau</option>
+                                <option value="">Chastre</option>
+                                <option value="">Chaumont-Gistoux</option>
+                                <option value="">Court-Saint-Etienne</option>
+                                <option value="">Genappe</option>
+                                <option value="">Grez-Doiceau</option>
+                                <option value="">Hélécine</option>
+                                <option value="">Incourt</option>
+                                <option value="">Ittre</option>
+                                <option value="">Jodoigne</option>
+                                <option value="">La Hulpe</option>
+                                <option value="">Lasne</option>
+                                <option value="">Mont-Saint-Guibert</option>
+                                <option value="">Nivelles</option>
+                                <option value="">Orp-Jauche</option>
+                                <option value="html/communes.html">Ottignies - Louvain-la-Neuve</option>
+                                <option value="">Perwez</option>
+                                <option value="">Ramilies</option>
+                                <option value="">Rebecq</option>
+                                <option value="">Rixensart</option>
+                                <option value="">Tubize</option>
+                                <option value="">Villers-la-Ville</option>
+                                <option value="">Walhain</option>
+                                <option value="">Waterloo</option>
+                                <option value="">Wavre</option>                  
+                       </select>
+                      
+                </button>
+
+        </section>
+</div>
+ <!-- PIED DE PAGE -->
+<div data-role="footer">
+        <footer>
+           
+        </footer>
+</div>
+
+
+</div>
+
+
+      <script src="https://code.jquery.com/jquery-1.8.0.min.js" type="text/javascript"></script>
+      <script src="js/jquery MOBILE 1.4.5.js" type="text/javascript"></script>   
+      <script src="js/index.js" type="text/javascript"></script>
+
+    </body>
+</html>
