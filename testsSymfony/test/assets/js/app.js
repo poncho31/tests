@@ -1,3 +1,5 @@
+// assets/js/app.js
+
 require('../css/app.css');
-document.write('welcome to my app');
-console.log('ffefefefefe');
+alert('ffffff');
+console.log('Hello Webpack Encore');

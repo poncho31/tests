@@ -1,10 +1,4 @@
 {
-    "behat/transliterator": {
-        "version": "v1.2.0"
-    },
-    "cocur/slugify": {
-        "version": "v3.1"
-    },
     "doctrine/annotations": {
         "version": "1.0",
         "recipe": {
@@ -23,9 +17,6 @@
     "doctrine/common": {
         "version": "v2.9.0"
     },
-    "doctrine/data-fixtures": {
-        "version": "v1.3.1"
-    },
     "doctrine/dbal": {
         "version": "v2.8.0"
     },
@@ -35,20 +26,11 @@
             "repo": "github.com/symfony/recipes",
             "branch": "master",
             "version": "1.6",
-            "ref": "ae205d5114e719deb64d2110f56ef910787d1e04"
+            "ref": "453e89b78ded666f351617baca5ae40d20622351"
         }
     },
     "doctrine/doctrine-cache-bundle": {
-        "version": "1.3.3"
-    },
-    "doctrine/doctrine-fixtures-bundle": {
-        "version": "3.0",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "master",
-            "version": "3.0",
-            "ref": "fc52d86631a6dfd9fdf3381d0b7e3df2069e51b3"
-        }
+        "version": "1.3.5"
     },
     "doctrine/doctrine-migrations-bundle": {
         "version": "1.2",
@@ -101,32 +83,8 @@
     "fig/link-util": {
         "version": "1.0.0"
     },
-    "fzaninotto/faker": {
-        "version": "v1.8.0"
-    },
-    "imagine/imagine": {
-        "version": "v0.7.1"
-    },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
-    },
-    "jms/metadata": {
-        "version": "1.7.0"
-    },
-    "knplabs/knp-components": {
-        "version": "v1.3.10"
-    },
-    "knplabs/knp-paginator-bundle": {
-        "version": "v2.8.0"
-    },
-    "liip/imagine-bundle": {
-        "version": "1.8",
-        "recipe": {
-            "repo": "github.com/symfony/recipes-contrib",
-            "branch": "master",
-            "version": "1.8",
-            "ref": "523b4b0cfb88dc8637cb56e427e6be7718bdce32"
-        }
     },
     "monolog/monolog": {
         "version": "1.24.0"
@@ -135,7 +93,7 @@
         "version": "v4.1.0"
     },
     "ocramius/proxy-manager": {
-        "version": "2.2.2"
+        "version": "2.1.1"
     },
     "phpdocumentor/reflection-common": {
         "version": "1.0.1"
@@ -191,7 +149,7 @@
             "repo": "github.com/symfony/recipes",
             "branch": "master",
             "version": "3.3",
-            "ref": "e3868d2f4a5104f19f844fe551099a00c6562527"
+            "ref": "181d766db0eb468f41337f9b2d9d5b61ba1ee441"
         }
     },
     "symfony/css-selector": {
@@ -242,7 +200,7 @@
             "repo": "github.com/symfony/recipes",
             "branch": "master",
             "version": "1.0",
-            "ref": "e921bdbfe20cdefa3b82f379d1cd36df1bc8d115"
+            "ref": "5f8a51c0fad684396f6b6c0fd770e043439cb632"
         }
     },
     "symfony/form": {
@@ -254,7 +212,7 @@
             "repo": "github.com/symfony/recipes",
             "branch": "master",
             "version": "3.3",
-            "ref": "a9eecaa968723a91299a2eb1a893648dc11a7194"
+            "ref": "cfaca55cab772a0c11bf899ddbd21eecb708c8ae"
         }
     },
     "symfony/http-foundation": {
@@ -268,9 +226,6 @@
     },
     "symfony/intl": {
         "version": "v4.1.7"
-    },
-    "symfony/lts": {
-        "version": "4-dev"
     },
     "symfony/maker-bundle": {
         "version": "1.0",
@@ -308,11 +263,8 @@
             "repo": "github.com/symfony/recipes",
             "branch": "master",
             "version": "4.1",
-            "ref": "b14c7f62fabeedf256d3211b0f704402b5530ba1"
+            "ref": "b4c7d939cac9a67e02366fa7971746e9cbf1dad0"
         }
-    },
-    "symfony/polyfill-ctype": {
-        "version": "v1.10.0"
     },
     "symfony/polyfill-intl-icu": {
         "version": "v1.10.0"
@@ -373,9 +325,6 @@
             "version": "2.5",
             "ref": "3db029c03e452b4a23f7fc45cec7c922c2247eb8"
         }
-    },
-    "symfony/templating": {
-        "version": "v4.1.7"
     },
     "symfony/test-pack": {
         "version": "v1.0.4"
@@ -448,15 +397,6 @@
     },
     "twig/twig": {
         "version": "v2.5.0"
-    },
-    "vich/uploader-bundle": {
-        "version": "1.5",
-        "recipe": {
-            "repo": "github.com/symfony/recipes-contrib",
-            "branch": "master",
-            "version": "1.5",
-            "ref": "c4f5755b37fb65b9c6a3cbdae91205c15a137ed4"
-        }
     },
     "webmozart/assert": {
         "version": "1.3.0"

@@ -25,23 +25,36 @@ Encore
     // but, you probably want this, unless you're building a single-page app
     .enableSingleRuntimeChunk()
 
+    /*
+     * FEATURE CONFIG
+     *
+     * Enable & configure other features below. For a full
+     * list of features, see:
+     * https://symfony.com/doc/current/frontend.html#adding-more-features
+     */
     .cleanupOutputBeforeBuild()
+    .enableBuildNotifications()
     .enableSourceMaps(!Encore.isProduction())
     // enables hashed filenames (e.g. app.abc123.css)
     .enableVersioning(Encore.isProduction())
 
+    .configureBabel(function (babelConfig) {
+        // add additional presets
+        babelConfig.presets.push('@babel/preset-flow');
+    });
+
+
+    // enables Sass/SCSS support
+    //.enableSassLoader()
+
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
 
-    // uncomment if you use Sass/SCSS files
-    //.enableSassLoader()
-
     // uncomment if you're having problems with a jQuery plugin
     //.autoProvidejQuery()
-    const config = Encore.getWebpackConfig();
-    config.watchOptions = {
-        poll: true,
-    };
 ;
 
-module.exports = config;
+var config= Encore.getWebpackConfig();
+config.externals.jquery = 'Jquery';
+
+ module.exports = config;
