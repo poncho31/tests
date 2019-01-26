@@ -6,9 +6,13 @@
 	<link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jquery-editable/css/jquery-editable.css" rel="stylesheet"/>
 	<style>
 		.editable-popup{background: black; color: white;}
+		.voir-commentaire{display: none; width: 200px; height: 400px;}
 	</style>
 </head>
 <body>
+	<div class="voir-commentaire">
+		
+	</div>
 	<table>
 		<thead>
 			<td>Numéro</td>

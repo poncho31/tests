@@ -1,18 +1,5 @@
 $(document).ready(function() {
-    //toggle `popup` / `inline` mode
-    $.fn.editable.defaults.mode = 'popup';     
-    
-    //make username editable
-    // $('.addComm').editable({
-    //     type: 'text',
-    //     url: '/post',    
-    //     pk: 1,    
-    //     placement: 'top',
-    //     title: 'Comment'
-    // });
-
-
-    //make status editable
+    $.fn.editable.defaults.mode = 'popup';
     $('#status').editable({
         type: 'select',
         title: 'Select status',
@@ -24,7 +11,10 @@ $(document).ready(function() {
             {value: 3, text: 'status 3'}
         ]
     });
-
+    $('body').on("click", ".seeComm", function(){
+        var echo = $(this);
+        console.log(echo);
+    })
 
     $("#numCmd").on('change', function(){
         var val = $(this).val();
@@ -37,13 +27,19 @@ $(document).ready(function() {
             var result = JSON.parse(data);
             for (var i = 0; i < result.length; i++) {
                 var numcmd = result[i]['numcmd'];
-                var comment = result[i]['commentaire'][0];
+                var commentLast = result[i]['commentaire'][0];
+                var commentAll= "";
+                for(var coms in result[i]['commentaire'])
+                    {
+                        commentAll += result[i]['commentaire'][coms]+"\n";
+                    }
                 var id = result[i]['id'];
                 $("#addRow").append(
                     "<tr>"+
                     "<td>"+numcmd+"</td>"+
-                    "<td><div>"+((comment==undefined)?"":comment)+"</div>"+
-                        "<button class='addComm'>+</button><button>voir</button>" +
+                    "<td><div>"+((commentLast==undefined)?"":commentLast)+"</div>"+
+                        "<button class='addComm' value='"+id+"'>+</button>"+
+                        "<button class='seeComm' value='"+id+"' title='"+commentAll+"'>voir</button>" +
                     "</td>"+
                     "</tr>"
                     );
@@ -53,7 +49,7 @@ $(document).ready(function() {
                                     placement: 'bottom',
                                     value: "Ajouter commentaire",
                                     success: function(response, commentaire) {
-                                        addComm(id, commentaire);
+                                        addComm($(this).val(), commentaire);
                                     }
                                     // title: 'Ajouter commentaire',
                                 });
@@ -69,6 +65,7 @@ $(document).ready(function() {
           data: {idcmd: id, comment: commentaire}
         }).done(function(data) {
             console.log("data => " + data);
+            $("body").append(data);
         })
     }
 })

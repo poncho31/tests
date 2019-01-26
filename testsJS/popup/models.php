@@ -3,17 +3,17 @@
  $idcmd = isset($_POST['idcmd'])?true:false;
  $comment = isset($_POST['comment'])?true:false;
  $db = new PDO('mysql:host=localhost;dbname=test', "root", "");
-
+ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  if ($numcmd) {
  	 $stmt = $db->prepare("SELECT * FROM popup_num");
  	 $stmt->execute();
  	 $result = array();
  	 while ($row = $stmt->fetch()) {
- 	 	$stmt2 = $db->prepare("SELECT * FROM popup_commentaire WHERE fk_numcmd = ".$row['id']);
+ 	 	$stmt2 = $db->prepare("SELECT * FROM popup_commentaire WHERE fk_numcmd = ".$row['id']." ORDER BY id DESC");
 		$stmt2->execute();
 		$comment = array();
 		while ($row2 = $stmt2->fetch()) {
-			$comment [] = $row2["commentaire"];
+			$comment [] = $row2["date"] ." - ". $row2["user"] . " - " . htmlentities($row2["commentaire"], ENT_QUOTES);
 		}
 	 	$result []=
 	 		[
@@ -29,19 +29,14 @@
  	$comment = $_POST['comment'];
  	$date = date("Y-m-d"); 
  	$user = "user";
- 	$stmt = $db->prepare("INSERT INTO popup_commentaire (fk_numcmd, user, commentaire, date) VALUES (:fk_numcmd, :user, :commentaire, :date)");
- 	$stmt->bindParam(":fk_numcmd", $idcmd);
- 	$stmt->bindParam(":user", $user);
- 	$stmt->bindParam(":commentaire", $comment);
- 	$stmt->bindParam(":date", $date);
- 	$stmt->execute();
+ 	$sql = "INSERT INTO popup_commentaire (fk_numcmd, user, commentaire, date) VALUES (?, ?, ?, ?)";
+ 	$stmt = $db->prepare($sql);
+ 	$stmt->execute([$idcmd, $user, htmlentities($comment, ENT_QUOTES), $date]);
  	if ($stmt) {
- 		echo json_encode(["success"]);
+ 		echo json_encode([$idcmd]);
  	}
  	else{
  		echo json_encode(["error"]);
  	}
  }
-
-// echo "hello";
 ?>
