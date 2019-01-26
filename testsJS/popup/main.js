@@ -27,6 +27,7 @@ $(document).ready(function() {
 
     $("#numCmd").on('change', function(){
         var val = $(this).val();
+        $("#addRow").html("");
         $.ajax({
           method: "POST",
           url: "models.php",
@@ -35,11 +36,12 @@ $(document).ready(function() {
             var result = JSON.parse(data);
             for (var i = 0; i < result.length; i++) {
                 console.log(result[i]['numcmd']);
-                $("#addRow").html("<td></td>"+
-                "<td><a href="#" id="lastComment">date - user - commentaire</a><br><br>
-                <button id="addComm" data-type="text" data-placement="bottom" data-title="Enter username">Ajouter</button>
-            </td>
-                ");
+                $("#addRow").append(
+                    "<tr>"+
+                    "<td>"+result[i]['numcmd']+"</td>"+
+                    "<td></td>"+
+                    "</tr>"
+                    );
             }
         });
 

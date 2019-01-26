@@ -15,13 +15,14 @@
 			<td><input type="text" id="numCmd"></td>
 			<td></td>
 		</tbody>
-		<tbody id="addRow">
-			<td></td>
+		<tbody id="addRow"></tbody>
+		<!-- <tbody id="addRow"> -->
+<!-- 			<td></td>
 			<td>
 				<div>date - user - commentaire</div><br>
 				<button id="addComm" data-type="text" data-placement="bottom" data-title="Enter username">Ajouter</button>
-			</td>
-		</tbody>
+			</td> -->
+		<!-- </tbody> -->
 	</table>
 	<script
 		src="https://code.jquery.com/jquery-3.3.1.min.js"
