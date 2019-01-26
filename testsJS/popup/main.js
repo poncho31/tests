@@ -3,13 +3,13 @@ $(document).ready(function() {
     $.fn.editable.defaults.mode = 'popup';     
     
     //make username editable
-    $('#addComm').editable({
-        type: 'text',
-        url: '/post',    
-        pk: 1,    
-        placement: 'top',
-        title: 'Comment'
-    });
+    // $('.addComm').editable({
+    //     type: 'text',
+    //     url: '/post',    
+    //     pk: 1,    
+    //     placement: 'top',
+    //     title: 'Comment'
+    // });
 
 
     //make status editable
@@ -25,6 +25,7 @@ $(document).ready(function() {
         ]
     });
 
+
     $("#numCmd").on('change', function(){
         var val = $(this).val();
         $("#addRow").html("");
@@ -35,16 +36,39 @@ $(document).ready(function() {
         }).done(function(data) {
             var result = JSON.parse(data);
             for (var i = 0; i < result.length; i++) {
-                console.log(result[i]['numcmd']);
+                var numcmd = result[i]['numcmd'];
+                var comment = result[i]['commentaire'][0];
+                var id = result[i]['id'];
                 $("#addRow").append(
                     "<tr>"+
-                    "<td>"+result[i]['numcmd']+"</td>"+
-                    "<td></td>"+
+                    "<td>"+numcmd+"</td>"+
+                    "<td><div>"+((comment==undefined)?"":comment)+"</div>"+
+                        "<button class='addComm'>+</button><button>voir</button>" +
+                    "</td>"+
                     "</tr>"
                     );
+                $('.addComm').editable({
+                                    type: 'text',
+                                    url: 'models.php',
+                                    placement: 'bottom',
+                                    value: "Ajouter commentaire",
+                                    success: function(response, commentaire) {
+                                        addComm(id, commentaire);
+                                    }
+                                    // title: 'Ajouter commentaire',
+                                });
             }
         });
 
-    })
+    });
 
-});
+    function addComm(id, commentaire){
+        $.ajax({
+          method: "POST",
+          url: "models.php",
+          data: {idcmd: id, comment: commentaire}
+        }).done(function(data) {
+            console.log("data => " + data);
+        })
+    }
+})

@@ -4,6 +4,9 @@
 	<meta charset="UTF-8">
 	<title>popup</title>
 	<link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jquery-editable/css/jquery-editable.css" rel="stylesheet"/>
+	<style>
+		.editable-popup{background: black; color: white;}
+	</style>
 </head>
 <body>
 	<table>
@@ -16,13 +19,11 @@
 			<td></td>
 		</tbody>
 		<tbody id="addRow"></tbody>
-		<!-- <tbody id="addRow"> -->
-<!-- 			<td></td>
-			<td>
+			<!-- <td></td> -->
+<!-- 			<td>
 				<div>date - user - commentaire</div><br>
 				<button id="addComm" data-type="text" data-placement="bottom" data-title="Enter username">Ajouter</button>
 			</td> -->
-		<!-- </tbody> -->
 	</table>
 	<script
 		src="https://code.jquery.com/jquery-3.3.1.min.js"
