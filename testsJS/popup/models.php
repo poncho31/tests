@@ -13,7 +13,7 @@
 		$stmt2->execute();
 		$comment = array();
 		while ($row2 = $stmt2->fetch()) {
-			$comment [] = $row2["date"] ." - ". $row2["user"] . " - " . htmlentities($row2["commentaire"], ENT_QUOTES);
+			$comment [] = ["date"=>$row2["date"], "user"=>$row2["user"], "comment" => htmlentities($row2["commentaire"], ENT_QUOTES)];
 		}
 	 	$result []=
 	 		[
@@ -31,7 +31,7 @@
  	$user = "user";
  	$sql = "INSERT INTO popup_commentaire (fk_numcmd, user, commentaire, date) VALUES (?, ?, ?, ?)";
  	$stmt = $db->prepare($sql);
- 	$stmt->execute([$idcmd, $user, htmlentities($comment, ENT_QUOTES), $date]);
+ 	$stmt->execute([$idcmd, $user, $comment, $date]);
  	if ($stmt) {
  		echo json_encode([$idcmd]);
  	}
