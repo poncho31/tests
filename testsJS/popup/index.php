@@ -5,14 +5,29 @@
 	<title>popup</title>
 	<link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jquery-editable/css/jquery-editable.css" rel="stylesheet"/>
 	<style>
-		.editable-popup{background: black; color: white;}
-		.voir-commentaire{display: none; width: 200px; height: 400px;}
+		.editable-popup{background: #DFEEFC; color: white; padding: 1%;border: solid black 1px;}
+		.voir-commentaire{
+			display: none;
+			position: absolute;
+			width: auto; 
+			height: auto; 
+			background-color: #DFEEFC; 
+			right: 0; 
+			border: solid black 1px;
+			padding: 1%;
+			text-align: justify;
+
+		}
+		.addComm, .seeComm {margin: 1%;}
+		.close{position: relative; top: 100%; float: right;}
+		.close:hover{cursor: pointer;}
+		.removeflash{display: none}
+		.flashMsg{display: block; position: absolute; text-align: center; top: 0; right: 0%; padding: 1%; margin: 1%; }
 	</style>
 </head>
 <body>
-	<div class="voir-commentaire">
-		
-	</div>
+	<div class="voir-commentaire"></div>
+	<div class="flashMsg"></div>
 	<table>
 		<thead>
 			<td>Numéro</td>
@@ -23,11 +38,6 @@
 			<td></td>
 		</tbody>
 		<tbody id="addRow"></tbody>
-			<!-- <td></td> -->
-<!-- 			<td>
-				<div>date - user - commentaire</div><br>
-				<button id="addComm" data-type="text" data-placement="bottom" data-title="Enter username">Ajouter</button>
-			</td> -->
 	</table>
 	<script
 		src="https://code.jquery.com/jquery-3.3.1.min.js"
