@@ -1,0 +1,13 @@
+{
+    "name": "gille/machine-learning",
+    "description": "test machine learning",
+    "authors": [
+        {
+            "name": "gilles pinchart",
+            "email": "gilles.pinchart@gmail.com"
+        }
+    ],
+    "require": {
+        "php-ai/php-ml": "^0.7.0"
+    }
+}
